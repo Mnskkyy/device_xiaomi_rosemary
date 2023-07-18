@@ -17,6 +17,9 @@ $(call inherit-product-if-exists, vendor/xiaomi/miuicamera/config.mk)
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
+# Project ID Quota
+$(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
+
 # A/B
 PRODUCT_PACKAGES += \
     com.android.hardware.boot \
