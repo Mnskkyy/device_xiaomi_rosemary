@@ -63,6 +63,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libtinycompress \
     libaudiofoundation.vendor \
+    libunwindstack.vendor \
     tinymix
 
 PRODUCT_PACKAGES += \
@@ -101,6 +102,11 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4.vendor \
     android.hardware.camera.provider@2.5.vendor \
     android.hardware.camera.provider@2.6.vendor \
+
+PRODUCT_PACKAGES += \
+    libcamera_metadata.vendor \
+    libexif.vendor \
+    libpng.vendor
 
 PRODUCT_PACKAGES += \
     libdng_sdk.vendor
@@ -184,6 +190,10 @@ PRODUCT_PACKAGES += \
     android.hardware.gnss.measurement_corrections@1.1.vendor \
     android.hardware.gnss.visibility_control@1.0.vendor \
     android.hardware.gnss-V1-ndk_platform.vendor
+
+PRODUCT_PACKAGES += \
+    libcurl.vendor \
+    libexpat.vendor
 
 # Health
 $(call soong_config_set,lineage_health,charging_control_supports_bypass,false)
@@ -478,6 +488,9 @@ PRODUCT_PACKAGES += \
     libutils-v32 \
     libcrypto-v32 \
     libssl-v32
+
+PRODUCT_PACKAGES += \
+    libutilscallstack.vendor
 
 # Wi-Fi
 PRODUCT_PACKAGES += \
