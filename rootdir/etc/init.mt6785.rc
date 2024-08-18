@@ -1182,6 +1182,9 @@ service mi_thermald /vendor/bin/mi_thermald
     user root
     group system
 	
+on property:sys.boot_completed=1
+    restart android-hardware-media-c2-hal-1-2
+
 # FPSGO FBT Game
 on boot
     insmod /vendor/lib/modules/fpsgo.ko
