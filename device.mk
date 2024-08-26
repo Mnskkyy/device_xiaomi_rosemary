@@ -53,22 +53,21 @@ PRODUCT_PACKAGES += \
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio.service \
-    android.hardware.audio@7.0-impl \
-    android.hardware.audio.effect@7.0-impl \
-    android.hardware.bluetooth.audio-impl \
-    android.hardware.soundtrigger@2.3-impl
+    android.hardware.audio@7.0-impl:32 \
+    android.hardware.audio.effect@7.0-impl:32 \
+    android.hardware.bluetooth.audio-impl:32 \
+    android.hardware.soundtrigger@2.3-impl:32
 
 PRODUCT_PACKAGES += \
-    audio.bluetooth.default \
-    audio.r_submix.default \
-    audio.usbv2.default
+    audio.bluetooth.default:32 \
+    audio.r_submix.default:32 \
+    audio.usbv2.default:32
 
 PRODUCT_PACKAGES += \
-    libtinycompress \
-    libaudiofoundation.vendor \
-    libunwindstack.vendor \
-    tinymix \
-    libsqlite.vendor 
+    libtinycompress:32 \
+    libaudiofoundation.vendor:32 \
+    libunwindstack.vendor:32 \
+    tinymix
 
 PRODUCT_PACKAGES += \
     MtkInCallService
