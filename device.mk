@@ -100,6 +100,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libcamera_metadata.vendor \
     libexif.vendor \
+    libmemunreachable.vendor \
     libpng.vendor
 
 PRODUCT_PACKAGES += \
