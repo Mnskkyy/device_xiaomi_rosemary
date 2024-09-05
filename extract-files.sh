@@ -106,7 +106,7 @@ function blob_fixup {
         vendor/lib*/libcam.utils.sensorprovider.so|\
         vendor/lib*/librgbwlightsensor.so)
             [ "$2" = "" ] && return 0        
-            "$PATCHELF" --add-needed "libshim_sensors.so" "$2"
+            "${PATCHELF}" --replace-needed "libsensorndkbridge.so" "android.hardware.sensors@1.0-convert-shared.so" "${2}"
             ;;
         vendor/lib*/hw/vendor.mediatek.hardware.pq@2.13-impl.so)
             [ "$2" = "" ] && return 0        
@@ -123,6 +123,7 @@ function blob_fixup {
         system_ext/lib64/libsink.so)
             [ "$2" = "" ] && return 0        
             "${PATCHELF}" --add-needed "libshim_sink.so" "$2"
+            "${PATCHELF}" --replace-needed "libsensorndkbridge.so" "android.hardware.sensors@1.0-convert-shared.so" "${2}"
             ;;
         *)
              return 1
