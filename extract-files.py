@@ -24,7 +24,7 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libui_shim.so'),
     'system_ext/lib64/libsink.so': blob_fixup()
         .replace_needed('libsensorndkbridge.so', 'android.hardware.sensors@1.0-convert-shared.so')
-        .add_needed('libshim_sink.so'),
+        .add_needed('libaudioclient_shim.so'),
     'vendor/bin/mtk_agpsd': blob_fixup()
         .replace_needed('libcrypto.so', 'libcrypto-v32.so')
         .replace_needed('libssl.so', 'libssl-v32.so'),
