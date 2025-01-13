@@ -612,6 +612,18 @@
       "Node": "TopAppCpuset",
       "Duration": 0,
       "Value": "0-3"
+    },
+    {
+      "PowerHint": "DISPLAY_INACTIVE",
+      "Node": "CPULittleClusterMinFreq",
+      "Duration": 0,
+      "Value": "500000"
+    },
+    {
+      "PowerHint": "DISPLAY_INACTIVE",
+      "Node": "CPUBigClusterMinFreq",
+      "Duration": 0,
+      "Value": "774000"
     }
   ]
 }
