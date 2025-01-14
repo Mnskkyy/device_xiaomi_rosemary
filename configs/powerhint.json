@@ -624,6 +624,18 @@
       "Node": "CPUBigClusterMinFreq",
       "Duration": 0,
       "Value": "774000"
+    },
+    {
+      "PowerHint": "GAME",
+      "Node": "CPULittleClusterMinFreq",
+      "Duration": 0,
+      "Value": "1618000"
+    },
+    {
+      "PowerHint": "GAME",
+      "Node": "CPUBigClusterMinFreq",
+      "Duration": 0,
+      "Value": "1530000"
     }
   ]
 }
