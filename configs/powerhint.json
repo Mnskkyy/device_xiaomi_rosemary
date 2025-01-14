@@ -627,6 +627,11 @@
     },
     {
       "PowerHint": "GAME",
+      "Type": "EndHint",
+      "Value": "INTERACTION"
+    },
+    {
+      "PowerHint": "GAME",
       "Node": "CPULittleClusterMinFreq",
       "Duration": 0,
       "Value": "1618000"
