@@ -469,7 +469,6 @@ PRODUCT_PACKAGES += \
 # VNDK
 PRODUCT_PACKAGES += \
     libutils-v32 \
-    libcrypto-v32
 
 PRODUCT_PACKAGES += \
     libutilscallstack.vendor \
