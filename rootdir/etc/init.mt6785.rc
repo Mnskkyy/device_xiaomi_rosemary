@@ -1035,6 +1035,10 @@ on boot
     chmod 0644 /dev/goodix_fp
     chown system system /dev/goodix_fp
 
+    # Touch feature
+    chown system system /dev/xiaomi-touch
+    chmod 0660 /dev/xiaomi-touch
+
 # Stop bootprof
 on property:sys.boot_completed=1
     write /proc/bootprof "0"
