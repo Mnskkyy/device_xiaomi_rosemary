@@ -82,7 +82,6 @@ ODM_MANIFEST_SKUS += nfc
 ODM_MANIFEST_NFC_FILES := $(DEVICE_PATH)/manifest_nfc.xml
 
 # Init
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):init_rosemary
 TARGET_RECOVERY_DEVICE_MODULES := init_rosemary
 
 # Kernel
@@ -93,9 +92,6 @@ TARGET_KERNEL_CONFIG := rosemary_defconfig
 BOARD_KERNEL_SEPARATED_DTBO := true
 BOARD_CUSTOM_DTBOIMG_MK := $(DEVICE_PATH)/dtbo/dtbo.mk
 BOARD_KERNEL_IMAGE_NAME := Image.gz
-
-# Lineage Health
-TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_BYPASS := false
 
 # OTA assert
 TARGET_OTA_ASSERT_DEVICE := rosemary,rosemary_p,secret,secretr,maltose
