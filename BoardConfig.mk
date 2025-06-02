@@ -137,7 +137,6 @@ BOARD_HAS_MTK_HARDWARE := true
 BOARD_HAVE_MTK_FM := true
 
 # Power
-TARGET_POWER_LIBPERFMGR_MODE_EXTENSION_LIB := //$(DEVICE_PATH):libperfmgr-ext-xiaomi
 TARGET_TAP_TO_WAKE_NODE := "/sys/touchpanel/double_tap"
 
 # Properties

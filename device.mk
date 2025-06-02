@@ -342,6 +342,8 @@ PRODUCT_PACKAGES += \
     WifiOverlayRosemary
 
 # Power
+$(call soong_config_set,power_libperfmgr,mode_extension_lib, //$(DEVICE_PATH):libperfmgr-ext-xiaomi)
+
 PRODUCT_PACKAGES += \
     android.hardware.power-service-mediatek \
     android.hardware.power@1.3.vendor
