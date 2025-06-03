@@ -228,8 +228,10 @@ PRODUCT_BOOT_JARS += \
     mediatek-telephony-common
 
 PRODUCT_PACKAGES += \
+    libshim_sink \
     libui_shim \
-    libshim_sink
+    libui_shim.vendor \
+    libbase_shim
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/permissions/privapp-permissions-com.mediatek.ims.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-com.mediatek.ims.xml
@@ -481,7 +483,12 @@ PRODUCT_PACKAGES += \
     libssl-v32
 
 PRODUCT_PACKAGES += \
-    libutilscallstack.vendor
+    libutilscallstack.vendor \
+    libprocessgroup.vendor \
+    liblz4.vendor \
+    libssl.vendor \
+    libjsoncpp.vendor 
+
 
 # Wi-Fi
 PRODUCT_PACKAGES += \
