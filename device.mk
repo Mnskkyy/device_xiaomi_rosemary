@@ -281,7 +281,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libstagefright_foundation-v33
 # Init
-$(call soong_config_set,libinit,vendor_init_lib,//device/xiaomi/rosemary:init_rosemary)
+$(call soong_config_set,libinit,vendor_init_lib,//$(LOCAL_PATH):init_rosemary)
 # Neural Networks
 PRODUCT_PACKAGES += \
     android.hardware.neuralnetworks@1.0.vendor \
@@ -340,12 +340,11 @@ PRODUCT_PACKAGES += \
     WifiOverlayRosemary
 
 # Power
-$(call soong_config_set,power_libperfmgr,mode_extension_lib, //device/xiaomi/rosemary:libperfmgr-ext-xiaomi)
+$(call soong_config_set,power_libperfmgr,mode_extension_lib, //$(LOCAL_PATH):libperfmgr-ext-xiaomi)
 
 PRODUCT_PACKAGES += \
     android.hardware.power-service-mediatek \
-    android.hardware.power@1.3.vendor \
-    libperfmgr-ext-xiaomi
+    android.hardware.power@1.3.vendor 
 
 PRODUCT_PACKAGES += \
     vendor.mediatek.hardware.mtkpower@1.0.vendor \
