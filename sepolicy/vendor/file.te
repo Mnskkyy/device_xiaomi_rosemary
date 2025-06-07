@@ -22,3 +22,4 @@ type proc_sched_stune, fs_type, proc_type;
 
 # Touchpanel
 type sysfs_touchpanel, sysfs_type, fs_type;
+type proc_tp_gesture, fs_type, proc_type;
