@@ -1024,7 +1024,6 @@ on boot
     # DT2W
     chown system system /sys/touchpanel/double_tap
     chmod 0660 /sys/touchpanel/double_tap
-    write /proc/tp_gesture 1
     
     # Fingerprint
     chown system system /sys/devices/platform/1100a000.spi0/spi_master/spi0/spi0.0/irq
