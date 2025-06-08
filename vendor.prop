@@ -284,3 +284,7 @@ ro.vendor.connsys.dedicated.log.port=bt,wifi,gps,mcu
 
 # Zygote
 zygote.critical_window.minute=10
+
+# Fingerprint
+persist.vendor.fingerprint.type=side
+persist.vendor.fingerprint.sensor_location=1080|910|100|local:0
