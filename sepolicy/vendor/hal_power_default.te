@@ -7,6 +7,9 @@ allow hal_power_default sysfs_fpsgo:file rw_file_perms;
 allow hal_power_default vendor_sysfs_gpu:dir search;
 allow hal_power_default vendor_sysfs_gpu:file rw_file_perms;
 allow hal_power_default proc_tp_gesture:file rw_file_perms;
+allow hal_power_default vendor_sysfs_gpu:dir search;
+allow hal_power_default vendor_sysfs_gpu:file rw_file_perms;
+
 # Set CPU frequency
 allow hal_power_default sysfs_mtk_cpufreq:file rw_file_perms;
 
