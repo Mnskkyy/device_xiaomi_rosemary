@@ -27,4 +27,3 @@ type sysfs_mtk_gpufreq, fs_type, sysfs_type;
 
 # Touchpanel
 type sysfs_touchpanel, sysfs_type, fs_type;
-type proc_tp_gesture, fs_type, proc_type;
