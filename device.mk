@@ -293,11 +293,7 @@ PRODUCT_PACKAGES += \
     com.android.nfc_extras \
     libchrome.vendor \
     Tag \
-    android.hardware.nfc@1.0.vendor \
-    android.hardware.nfc@1.1.vendor \
-    android.hardware.nfc@1.2.vendor \
-    android.hardware.secure_element@1.0.vendor \
-    android.hardware.secure_element@1.1.vendor \
+    android.hardware.nfc-service.st \
     android.hardware.secure_element@1.2.vendor
 
 PRODUCT_COPY_FILES += \
