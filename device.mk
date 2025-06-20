@@ -10,6 +10,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
 # Inherit virtual_ab_ota product
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
 
+# Inherit MiuiCamera
+$(call inherit-product-if-exists, vendor/xiaomi/miuicamera/config.mk)
+
 # AAPT
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
@@ -65,7 +68,7 @@ PRODUCT_PACKAGES += \
     libaudiofoundation.vendor \
     libunwindstack.vendor \
     tinymix \
-    libsqlite.vendor
+    libsqlite.vendor 
 
 PRODUCT_PACKAGES += \
     MtkInCallService
