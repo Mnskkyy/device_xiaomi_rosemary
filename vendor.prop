@@ -288,3 +288,7 @@ zygote.critical_window.minute=10
 # Fingerprint
 persist.vendor.fingerprint.type=side
 persist.vendor.fingerprint.sensor_location=1080|910|100|local:0
+
+# HWUI
+debug.hwui.use_hint_manager=true
+debug.hwui.target_cpu_time_percent=30
