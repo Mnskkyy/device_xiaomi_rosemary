@@ -1177,26 +1177,26 @@ vendor/etc/slp_conf
 vendor/lib64/hw/gatekeeper.beanpod.so
 vendor/lib64/hw/libSoftGatekeeper.so;SYMLINK=vendor/lib64/hw/gatekeeper.default.so
 
-# Graphics
+# Graphics - from rosemary-user 12 SP1A.210812.016 V14.0.17.0.TFFMIXM release-keys
 vendor/lib/egl/egl.cfg
-vendor/lib64/arm.graphics-V1-ndk_platform.so
-vendor/lib64/egl/libGLES_mali.so;SYMLINK=vendor/lib64/hw/vulkan.mt6785.so
-vendor/lib64/egl/libGLES_meow.so
-vendor/lib64/egl/libMEOW_data.so
-vendor/lib64/egl/libMEOW_gift.so
-vendor/lib64/egl/libMEOW_qt.so
-vendor/lib64/egl/libMEOW_trace.so
-vendor/lib64/libDefaultFpsActor.so
-vendor/lib64/libFrameRecord.so
-vendor/lib64/libNoFpsActor.so
-vendor/lib64/libOpenCL.so
+vendor/lib64/arm.graphics-V1-ndk_platform.so|f5c95ac5a2ee0f436c1ef2d8594550d029b23a40
+vendor/lib64/egl/libGLES_mali.so;SYMLINK=vendor/lib64/hw/vulkan.mt6785.so;DISABLE_CHECKELF|2a40f2fc269242b0f06b76cfede9611be04a27ab
+vendor/lib64/egl/libGLES_meow.so|9dced902aeb666dc806f22c60466bf3a82895a78
+vendor/lib64/egl/libMEOW_data.so|e22b99d1384437573f5f62630822889f59f21f55
+vendor/lib64/egl/libMEOW_gift.so|d23f0cebe4808fe3e5ce51efc8743e5a76d415d8
+vendor/lib64/egl/libMEOW_qt.so|bfe7d4192eb5be3255403c1c6eb183d1de0544c4
+vendor/lib64/egl/libMEOW_trace.so|fd857c813ec06b5a62e3ff16d959d789bf7d41c9
+vendor/lib64/libDefaultFpsActor.so|1f8063dbbdff83561f802903db3ea79ba5541219
+vendor/lib64/libFrameRecord.so|a933ecc830d8516036d891daa3086cead3917fbe
+vendor/lib64/libNoFpsActor.so|1138531d44cb99e7806ebb02bd73ce45fd8cb6fc
+vendor/lib64/libOpenCL.so|e364f840710094acb88fc97ceb6bb62899206d73
 vendor/lib64/libappgamepq.so
 vendor/lib64/libcomposer_ext.so
 vendor/lib64/libgamehdr.so
-vendor/lib64/libged.so
-vendor/lib64/libgpu_aux.so
-vendor/lib64/libgpud.so
-vendor/lib64/libion_mtk.so
+vendor/lib64/libged.so|74e98f1420cf4eb93f77e943b13298277b7b748e
+vendor/lib64/libgpu_aux.so|767ac8f63300f51307b15bb20673442e6222aadc
+vendor/lib64/libgpud.so|3bc2240da4d76ac58008e2fb2b68704a34293dd6
+vendor/lib64/libion_mtk.so|28e1ad56a8c94aa17d3c554d285e70c97361f57f
 vendor/lib64/libion_ulit.so
 vendor/lib64/libmml.so
 vendor/lib64/libpqframework.so
