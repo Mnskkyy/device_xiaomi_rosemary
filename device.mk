@@ -229,7 +229,10 @@ PRODUCT_PACKAGES += \
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power-service.lineage-libperfmgr \
-    vendor.mediatek.hardware.mtkpower@1.2-service.stub
+    vendor.mediatek.hardware.mtkpower@1.2-service.stub \
+    libmtkperf_client \
+    libmtkperf_client_vendor \
+    libpowerhalwrap_vendor 
 
 # PowerOffAlarm
 PRODUCT_PACKAGES += \
@@ -320,8 +323,9 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/interfaces \
     hardware/google/pixel \
     hardware/mediatek \
+    hardware/mediatek/libmtkperf_client \
     hardware/xiaomi \
-    hardware/lineage/interfaces/power-libperfmgr
+    hardware/lineage/interfaces/power-libperfmgr 
 
 # Thermal
 PRODUCT_PACKAGES += \
