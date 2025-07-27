@@ -1,6 +1,3 @@
-on early-init
-    write /sys/module/musb_hdrc/parameters/kernel_init_done 1
-
 on post-fs
     mkdir /dev/usb-ffs 0775 shell shell
     mkdir /dev/usb-ffs/adb 0770 shell shell
@@ -69,7 +66,6 @@ on post-fs
     chown system system /config/usb_gadget/g1/functions
     chown system system /config/usb_gadget/g1/functions/accessory.gs2
     chown system system /config/usb_gadget/g1/functions/audio_source.gs3
-    chown system system /config/usb_gadget/g1/functions/dm.gs7
     chown system system /config/usb_gadget/g1/functions/ffs.adb
     chown system system /config/usb_gadget/g1/functions/ffs.mtp
     chown system system /config/usb_gadget/g1/functions/ffs.ptp
@@ -128,8 +124,11 @@ on post-fs
 
 on boot
     setprop sys.usb.configfs 2
-    setprop sys.usb.controller "musb-hdrc"
+    setprop sys.usb.controller "usb0"
     write /sys/class/android_usb/android0/f_mtp/cpu_mask 0xF0
+    write /sys/module/usb_f_mtp/parameters/mtp_rx_cont 1
+    chmod 0664 /sys/class/android_usb/android0/iSerial
+    chown root system /sys/class/android_usb/android0/iSerial
 
     chown radio system /sys/class/usb_rawbulk/data/enable
     chmod 0660 /sys/class/usb_rawbulk/data/enable
@@ -161,12 +160,12 @@ on boot
     chown root system /sys/class/typec/port0/power_role
     chown root system /sys/class/typec/port0/data_role
     chown root system /sys/class/typec/port0/port_type
-    chown root system /sys/class/udc/${sys.usb.controller}/device/cmode
+    chown root system /sys/class/udc/${sys.usb.controller}/device/mode
     chown root system /sys/class/udc/${sys.usb.controller}/device/saving
     chmod 664 /sys/class/typec/port0/power_role
     chmod 664 /sys/class/typec/port0/data_role
     chmod 664 /sys/class/typec/port0/port_type
-    chmod 664 /sys/class/udc/${sys.usb.controller}/device/cmode
+    chmod 664 /sys/class/udc/${sys.usb.controller}/device/mode
     chmod 664 /sys/class/udc/${sys.usb.controller}/device/saving
 
 on property:dev.bootcomplete=1
@@ -174,7 +173,7 @@ on property:dev.bootcomplete=1
 
 on charger
     mkdir /config/usb_gadget/g1 0770 shell shell
-    write /config/usb_gadget/g1/idVendor 0x0E8D
+    write /config/usb_gadget/g1/idVendor 0x2717
     write /config/usb_gadget/g1/bcdDevice 0x0223
     write /config/usb_gadget/g1/bcdUSB 0x0200
     write /config/usb_gadget/g1/os_desc/use 1
@@ -187,9 +186,8 @@ on charger
     mkdir /config/usb_gadget/g1/configs/b.1/strings/0x409 0770 shell shell
     write /config/usb_gadget/g1/configs/b.1/MaxPower 500
     mount functionfs adb /dev/usb-ffs/adb uid=2000,gid=2000
-
+    setprop sys.usb.controller "usb0"
     setprop sys.usb.configfs 1
-    setprop sys.usb.controller "musb-hdrc"
     setprop sys.usb.config hid
 
 on property:sys.usb.ffs.ready=1 && property:sys.usb.config=adb && property:sys.usb.configfs=1
