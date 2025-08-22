@@ -87,7 +87,13 @@ static const std::vector<variant_info_t> variants = {
     secretr_info,
 };
 
-void vendor_load_properties() {
+void vendor_process_bootenv() {
     search_variant(variants);
     set_dalvik_heap();
+}
+
+void vendor_load_properties() {
+#if __ANDROID_API__ < 36
+    vendor_process_bootenv();
+#endif
 }
