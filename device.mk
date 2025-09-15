@@ -241,6 +241,9 @@ PRODUCT_PACKAGES += \
     TetheringConfigOverlayRosemary \
     WifiOverlayRosemary
 
+PRODUCT_PACKAGES += \
+    NcmTetheringOverlay
+
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power-service.lineage-libperfmgr \
