@@ -20,16 +20,10 @@ PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := Redmi
 PRODUCT_MODEL := M2101K7BNY
 
-#ngising os
-RISING_MAINTAINER="probaero"
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
-WITH_GMS := true
-TARGET_INCLUDE_GOOGLE_DIALER := true
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    RisingMaintainer="probaero" \
-    RisingChipset="Helio G95" \
-    BuildDesc="rosemary-user 12 SP1A.210812.016 V14.0.11.0.TKLMIXM release-keys" \
-    BuildFingerprint=Redmi/rosemary_global/rosemary:12/SP1A.210812.016/V14.0.11.0.TKLMIXM:user/release-keys \
+    BuildDesc="rosemary-user 12 SP1A.210812.016 V14.0.7.0.TKLMIXM release-keys" \
+    BuildFingerprint=Redmi/rosemary_global/rosemary:12/SP1A.210812.016/V14.0.7.0.TKLMIXM:user/release-keys \
     SystemModel=$(PRODUCT_SYSTEM_DEVICE) \
     SystemName=$(PRODUCT_SYSTEM_NAME) \
     ProductModel=$(PRODUCT_SYSTEM_DEVICE) \
