@@ -24,14 +24,10 @@ vendor/lib64/vendor.mediatek.hardware.apuware.utils@2.0.so
 vendor/lib64/vendor.mediatek.hardware.apuware.xrp@1.0.so
 
 # Audio
-vendor/bin/audiocmdservice_atci
 vendor/bin/mt6660_calibration
 vendor/bin/rt5512_calibration
 vendor/etc/FV-SAM-MTK2.dat
-vendor/etc/init/audiocmdservice_atci.rc
 vendor/etc/smartpa_param/AW_DSP.bin
-vendor/lib/hw/android.hardware.audio@6.0-impl-mediatek.so
-vendor/lib/hw/android.hardware.audio@7.0-impl-mediatek.so
 vendor/lib/hw/audio.primary.mt6785.so
 vendor/lib/hw/audio.r_submix.mt6785.so
 vendor/lib/libMtkSpeechEnh.so
@@ -65,39 +61,8 @@ vendor/lib/libvow_ap_test_dd.so
 vendor/lib/libvow_ap_test_ha.so
 vendor/lib/libvow_ap_test_hh.so
 vendor/lib/libvow_ap_test_nn.so
-vendor/lib/vendor.mediatek.hardware.audio@6.1.so
 vendor/lib/vendor.mediatek.hardware.audio@7.1.so
-vendor/lib64/hw/android.hardware.audio@6.0-impl-mediatek.so
-vendor/lib64/hw/android.hardware.audio@7.0-impl-mediatek.so
-vendor/lib64/hw/audio.primary.mt6785.so
-vendor/lib64/hw/audio.r_submix.mt6785.so
-vendor/lib64/libMtkSpeechEnh.so
-vendor/lib64/lib_bsscore.so
-vendor/lib64/lib_iir.so
-vendor/lib64/lib_speech_enh.so
-vendor/lib64/libaudio_param_parser-vnd.so
-vendor/lib64/libaudiocompensationfilter_vendor.so
-vendor/lib64/libaudiocompensationfilterc.so
-vendor/lib64/libaudiocomponentengine_vendor.so
-vendor/lib64/libaudiocomponentenginec.so
-vendor/lib64/libaudiocustparam_vendor.so
-vendor/lib64/libaudiodcrflt_vendor.so
-vendor/lib64/libaudiofmtconv.so
-vendor/lib64/libaudioloudc.so
-vendor/lib64/libaudioprimarydevicehalifclient.so
-vendor/lib64/libaudiotoolkit_vendor.so
-vendor/lib64/libaurisysdemo.so
-vendor/lib64/libawinicsmartpaparse.so
-vendor/lib64/libbessound_hd_mtk_vendor.so
-vendor/lib64/libblisrc32_vendor.so
-vendor/lib64/libcvsd_mtk.so
-vendor/lib64/libfvaudio.so
 vendor/lib64/libnotifyaudiohal.so;FIX_SONAME
-vendor/lib64/librt_extamp_intf.so
-vendor/lib64/libspeech_enh_lib.so;FIX_SONAME
-vendor/lib64/libspeechparser_vendor.so
-vendor/lib64/vendor.mediatek.hardware.audio@6.1.so
-vendor/lib64/vendor.mediatek.hardware.audio@7.1.so
 
 # Audio (Configs)
 vendor/etc/audio_param/AudioParamOptions.xml
@@ -220,28 +185,15 @@ vendor/etc/aurisys_param/FV-SAM-MTKXX.dat
 # Bluetooth
 vendor/bin/hw/android.hardware.bluetooth@1.1-service-mediatek
 vendor/etc/init/android.hardware.bluetooth@1.1-service-mediatek.rc
-vendor/lib/hw/android.hardware.bluetooth@1.1-impl-mediatek.so
-vendor/lib/hw/vendor.mediatek.hardware.bluetooth.audio@2.1-impl.so
-vendor/lib/hw/vendor.mediatek.hardware.bluetooth.audio@2.2-impl.so
-vendor/lib/libbluetooth_audio_session_mediatek.so
-vendor/lib/libbluetooth_hw_test.so
-vendor/lib/libbluetooth_mtk.so
-vendor/lib/libbluetooth_mtk_pure.so
-vendor/lib/libbluetooth_relayer.so
-vendor/lib/libbluetoothem_mtk.so
-vendor/lib/libbt-vendor.so
-vendor/lib/vendor.mediatek.hardware.bluetooth.audio@2.1.so
-vendor/lib/vendor.mediatek.hardware.bluetooth.audio@2.2.so
 vendor/lib64/hw/android.hardware.bluetooth@1.1-impl-mediatek.so
-vendor/lib64/hw/vendor.mediatek.hardware.bluetooth.audio@2.1-impl.so
-vendor/lib64/hw/vendor.mediatek.hardware.bluetooth.audio@2.2-impl.so
 vendor/lib64/libbluetooth_audio_session_mediatek.so
-vendor/lib64/libbluetooth_hw_test.so
 vendor/lib64/libbluetooth_mtk.so
 vendor/lib64/libbluetooth_mtk_pure.so
-vendor/lib64/libbluetooth_relayer.so
-vendor/lib64/libbluetoothem_mtk.so
 vendor/lib64/libbt-vendor.so
+
+# Bluetooth (A2DP)
+vendor/lib/vendor.mediatek.hardware.bluetooth.audio@2.1.so
+vendor/lib/vendor.mediatek.hardware.bluetooth.audio@2.2.so
 vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.1.so
 vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.2.so
 
@@ -781,6 +733,7 @@ vendor/lib64/libSonyIMX386PdafLibrary.so
 vendor/lib64/libSonyIMX386PdafLibraryWrapper.so
 vendor/lib64/libSonyIMX519PdafLibrary.so
 vendor/lib64/libSonyIMX519PdafLibraryWrapper.so
+vendor/lib64/lib_bsscore.so
 vendor/lib64/libalLDC.so;DISABLE_CHECKELF
 vendor/lib64/libalhLDC.so;DISABLE_CHECKELF
 vendor/lib64/libanc_dc_base.so
@@ -1237,7 +1190,6 @@ vendor/lib64/hw/vendor.mediatek.hardware.videotelephony@1.0-impl.so
 vendor/lib64/libipsec_ims_shr.so
 vendor/lib64/libmmagent.so
 vendor/lib64/libmtknetcap.so
-vendor/lib64/libmtkspparser.so
 vendor/lib64/libwapi.so
 vendor/lib64/vendor.mediatek.hardware.mmagent@1.0.so
 vendor/lib64/vendor.mediatek.hardware.mmagent@1.1.so
@@ -1729,12 +1681,7 @@ vendor/bin/hw/android.hardware.secure_element@1.2-service-mediatek
 vendor/etc/init/android.hardware.secure_element@1.2-service-mediatek.rc
 
 # Sensors
-vendor/bin/sensors_test
-vendor/etc/cit_config.xml
 vendor/etc/elliptic_sensor.xml
-vendor/lib/libakm.so;FIX_SONAME
-vendor/lib/libhwm.so
-vendor/lib/librgbwlightsensor.so
 vendor/lib64/hw/sensors.elliptic.so;FIX_SONAME
 vendor/lib64/hw/sensors.mt6785.so
 vendor/lib64/libakm.so;FIX_SONAME
@@ -1751,7 +1698,6 @@ vendor/lib64/vendor.microtrust.hardware.soter@1.0.so
 
 # Soundtrigger
 vendor/lib/hw/sound_trigger.primary.default.so
-vendor/lib64/hw/sound_trigger.primary.default.so
 
 # Tether Offload
 vendor/bin/hw/tetheroffloadservice
