@@ -60,6 +60,8 @@ genfscon sysfs /devices/platform/11016000.i2c5/i2c-5/5-0034/mt6360_pmu_chg.2.aut
 genfscon sysfs /devices/platform/11016000.i2c5/i2c-5/5-004e/tcpc/type_c_port0/dual-role-type_c_port0/wakeup 		u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/1101a000.i2c7/i2c-7/7-0051/power_supply/ln8000/wakeup 						        u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/1101a000.i2c7/i2c-7/7-0051/wakeup 								                    u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/1101a000.i2c7/i2c-7/7-0065/power_supply/bq2597x-standalone/wakeup                              u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/1101a000.i2c7/i2c-7/7-0065/wakeup                                                              u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/15020000.imgsys_config/wakeup 									                    u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/15028000.dpe/wakeup 										                        u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/1502a000.wpe_a/wakeup 										                        u:object_r:sysfs_wakeup:s0
