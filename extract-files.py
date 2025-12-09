@@ -25,21 +25,7 @@ namespace_imports = [
     'vendor/xiaomi/rosemary'
 ]
 
-
-def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
-    return f'{lib}_{partition}' if partition == 'vendor' else None
-
-
-lib_fixups: lib_fixups_user_type = {
-    **lib_fixups,
-    ('vendor.mediatek.hardware.videotelephony@1.0',): lib_fixup_vendor_suffix,
-}
-
 blob_fixups: blob_fixups_user_type = {
-    'system_ext/lib64/libimsma.so': blob_fixup()
-        .replace_needed('libsink.so', 'libsink-mtk.so'),
-    'system/priv-app/ImsService/ImsService.apk': blob_fixup()
-        .apktool_patch('blob-patches/ImsService.patch', '-r'),
     ('vendor/bin/hw/android.hardware.gnss-service.mediatek', 'vendor/lib64/hw/android.hardware.gnss-impl-mediatek.so'): blob_fixup()
         .replace_needed('android.hardware.gnss-V1-ndk_platform.so', 'android.hardware.gnss-V1-ndk.so'),
     'vendor/bin/hw/android.hardware.media.c2@1.2-mediatek-64b': blob_fixup()
@@ -74,8 +60,6 @@ blob_fixups: blob_fixups_user_type = {
          .add_needed('libprocessgroup_shim.so'),
     'vendor/lib64/libgoodixhwfingerprint.so': blob_fixup()
         .replace_needed('libvendor.goodix.hardware.biometrics.fingerprint@2.1.so', 'vendor.goodix.hardware.biometrics.fingerprint@2.1.so'),
-    'system_ext/lib64/libimsma.so': blob_fixup()
-        .replace_needed('libsink.so', 'libsink-mtk.so'),
     'vendor/bin/hw/mtkfusionrild' : blob_fixup()
          .add_needed('libutils-v32.so')
 }  # fmt: skip
