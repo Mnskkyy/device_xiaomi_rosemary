@@ -139,8 +139,6 @@ PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-service
 
 # Health
-$(call soong_config_set_bool,lineage_health,charging_control_supports_bypass,false)
-
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl \
     android.hardware.health@2.1-impl.recovery \
