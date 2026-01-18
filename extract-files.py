@@ -66,7 +66,16 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/lib64/libgoodixhwfingerprint.so': blob_fixup()
         .replace_needed('libvendor.goodix.hardware.biometrics.fingerprint@2.1.so', 'vendor.goodix.hardware.biometrics.fingerprint@2.1.so'),
     'vendor/bin/hw/mtkfusionrild' : blob_fixup()
-         .add_needed('libutils-v32.so')
+         .add_needed('libutils-v32.so'),
+    'vendor/lib64/libdlbdsservice.so': blob_fixup()
+        .replace_needed("libstagefright_foundation.so", "libstagefright_foundation-v33.so"),
+    ('vendor/lib64/libMiVideoFilter.so'): blob_fixup()
+        .clear_symbol_version('AHardwareBuffer_allocate')
+        .clear_symbol_version('AHardwareBuffer_describe')
+        .clear_symbol_version('AHardwareBuffer_lock')
+        .clear_symbol_version('AHardwareBuffer_lockPlanes')
+        .clear_symbol_version('AHardwareBuffer_release')
+        .clear_symbol_version('AHardwareBuffer_unlock'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
