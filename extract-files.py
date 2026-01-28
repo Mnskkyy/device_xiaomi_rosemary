@@ -81,6 +81,12 @@ blob_fixups: blob_fixups_user_type = {
         .clear_symbol_version('AHardwareBuffer_lockPlanes')
         .clear_symbol_version('AHardwareBuffer_release')
         .clear_symbol_version('AHardwareBuffer_unlock'),
+    (
+        'vendor/lib/hw/audio.primary.mt6785.so',
+        'vendor/lib/librt_extamp_intf.so',
+        'vendor/lib64/hw/vendor.mediatek.hardware.pq@2.15-impl.so',
+    ): blob_fixup()
+        .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
