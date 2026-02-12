@@ -1704,10 +1704,6 @@ vendor/lib64/vendor.mediatek.hardware.mtkradioex@3.0.so
 # Rootdir
 vendor/lib64/libfft_vendor.so
 
-# Secure Element
-vendor/bin/hw/android.hardware.secure_element@1.2-service-mediatek
-vendor/etc/init/android.hardware.secure_element@1.2-service-mediatek.rc
-
 # Sensors
 vendor/bin/sensors_test
 vendor/etc/cit_config.xml
