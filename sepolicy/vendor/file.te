@@ -16,6 +16,9 @@ type sysfs_mtk_cpufreq, fs_type, sysfs_type;
 type vendor_sysfs_gpu, fs_type, sysfs_type;
 type sysfs_mtk_gpufreq, fs_type, sysfs_type;
 
+# MGLRU (LRU_GEN) — kernel/mm/lru_gen sysfs nodes (min_ttl_ms, enabled)
+type sysfs_lru_gen, fs_type, sysfs_type;
+
 # Touchpanel
 type sysfs_touchpanel, sysfs_type, fs_type;
 

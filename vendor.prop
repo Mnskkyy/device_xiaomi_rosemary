@@ -156,6 +156,14 @@ persist.vendor.mtk.volte.enable=1
 persist.vendor.viwifi_support=1
 
 # LMK
+# Use PSI-based killing: aligns with kernel CONFIG_PSI=y + MGLRU pressure bridge
+ro.lmk.use_psi=true
+ro.lmk.use_minfree_levels=false
+# PSI stall thresholds (ms): partial=70ms, complete=700ms
+ro.lmk.psi_partial_stall_ms=70
+ro.lmk.psi_complete_stall_ms=700
+# Kill heaviest task first — reduces thrashing under memory pressure
+ro.lmk.kill_heaviest_task=true
 ro.lmk.swap_free_low_percentage=20
 ro.lmk.thrashing_limit=30
 ro.lmk.thrashing_limit_decay=50

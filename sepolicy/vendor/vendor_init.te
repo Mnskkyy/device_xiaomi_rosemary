@@ -8,6 +8,10 @@ allow vendor_init nfc_data_vendor_file:dir { r_dir_perms create_dir_perms };
 
 allow vendor_init proc_sched_stune:file w_file_perms;
 
+# MGLRU (LRU_GEN): allow init to tune /sys/kernel/mm/lru_gen/min_ttl_ms et al.
+allow vendor_init sysfs_lru_gen:file w_file_perms;
+allow vendor_init sysfs_lru_gen:dir r_dir_perms;
+
 rw_dir_file(vendor_init, sysfs_leds)
 
 set_prop(vendor_init, vendor_fingerprint_prop)

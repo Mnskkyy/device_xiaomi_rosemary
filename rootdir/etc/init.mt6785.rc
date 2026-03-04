@@ -46,6 +46,32 @@ on init
     write /dev/cpuset/system-background/cpus 0-3
     write /dev/cpuset/top-app/cpus 0-7
 
+    # Configure scheduler up/down_rate_limit_us
+    # LITTLE cluster (cpu0-5, A55): conservative up, slow down
+    write /sys/devices/system/cpu/cpufreq/policy0/schedutil/up_rate_limit_us 500
+    write /sys/devices/system/cpu/cpufreq/policy0/schedutil/down_rate_limit_us 20000
+    # Big cluster (cpu6-7, A76): up=500us to complement FTAS fast-react cooldown (4ms)
+    # sugov_fast_react and cold-start bypass already override this for frame tasks
+    write /sys/devices/system/cpu/cpufreq/policy6/schedutil/up_rate_limit_us 500
+    write /sys/devices/system/cpu/cpufreq/policy6/schedutil/down_rate_limit_us 10000
+
+    # MGLRU (LRU_GEN) — prevent over-aggressive page reclaim under frame load
+    # min_ttl_ms=1000: pages survive at least 1s before eviction eligibility
+    write /sys/kernel/mm/lru_gen/min_ttl_ms 1000
+
+    # MGLRU <-> Scheduler pressure bridge (kernel: mm/vmscan.c)
+    # Feeds real-time PSI pressure level to scheduler and DVFS decisions
+    write /proc/sys/vm/mglru_sched_bridge 1
+    write /proc/sys/vm/mglru_psi_enabled 1
+    # PSI partial-stall threshold (percent*10) to trigger MEDIUM pressure
+    write /proc/sys/vm/mglru_psi_threshold 6
+    # Hysteresis: N consecutive ticks must confirm level change before committing
+    write /proc/sys/vm/mglru_psi_debounce 5
+    # Swap batch limiter: cap pages swapped per reclaim cycle under low-swap
+    write /proc/sys/vm/mglru_max_swap_batch 128
+    # Low-swap optimisation: reduce reclaim aggressiveness when swap > 80% full
+    write /proc/sys/vm/mglru_low_swap_opt 1
+
 on late-init
     write /proc/bootprof "INIT:late-init"
 # enable rcu_expedited
