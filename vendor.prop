@@ -315,3 +315,12 @@ persist.vendor.fingerprint.sensor_location=1080|910|100|local:0
 debug.hwui.use_hint_manager=true
 debug.sf.enable_adpf_cpu_hint=true
 debug.hwui.target_cpu_time_percent=30
+
+# PowerHAL / InteractionHandler
+# Disable fb0/drm idle-state polling (path not present on MT6785)
+vendor.powerhal.disp.idle_support=false
+# INTERACTION boost window: min 200ms, max 800ms, offset 0ms
+# (libperfmgr InteractionHandler: finalDuration = clamp(input+offset, min, max))
+vendor.powerhal.interaction.min=50
+vendor.powerhal.interaction.max=800
+vendor.powerhal.interaction.offset=0
