@@ -371,7 +371,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
 
 # Inherit MiuiCamera
-$(call inherit-product-if-exists, device/xiaomi/miuicamera-rosemary/device.mk)
+$(call inherit-product-if-exists, vendor/xiaomi/miuicamera/config.mk)
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/xiaomi/rosemary/rosemary-vendor.mk)
