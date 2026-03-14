@@ -77,6 +77,3 @@ genfscon sysfs /devices/system/cpu/cpufreq/policy(0|6)/scaling_(min|max)_freq   
 
 # MGLRU (LRU_GEN) — sysfs nodes (min_ttl_ms, enabled) written by init
 genfscon sysfs /kernel/mm/lru_gen										u:object_r:sysfs_lru_gen:s0
-
-# MGLRU <-> Scheduler bridge stats (read-only, /proc/mglru_sched_stats)
-genfscon proc /mglru_sched_stats										u:object_r:proc_security:s0
