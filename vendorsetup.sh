@@ -22,4 +22,8 @@ rm -rf vendor/private/keys && git clone https://github.com/Mnzz-Prjkt/android_pr
 echo 'Cloning IMS'
 rm -rf vendor/mediatek/ims && git clone https://github.com/mt6899-rodin/android_vendor_mediatek_ims.git -b lineage-23.2 vendor/mediatek/ims/
 
+# BCR
+echo 'Cloning BCR'
+rm -rf vendor/bcr && git clone https://github.com/Lunaris-AOSP/vendor_bcr.git -b 16.2 vendor/bcr
+
 echo 'Cloning process is completed, now its time for lunch'

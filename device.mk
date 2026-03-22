@@ -14,6 +14,12 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 # Project ID Quota
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
+# Keys
+-include vendor/private/keys/keys.mk
+
+# Basic Call Recorder
+$(call inherit-product, vendor/bcr/bcr.mk)
+
 # A/B
 PRODUCT_PACKAGES += \
     com.android.hardware.boot \
