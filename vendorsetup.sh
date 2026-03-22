@@ -22,4 +22,8 @@ rm -rf vendor/mediatek/ims && git clone https://github.com/mt6899-rodin/android_
 echo 'Cloning Leica Camera'
 rm -rf vendor/xiaomi/miuicamera && git clone https://github.com/Mnskkyy/proprietary_vendor_xiaomi_miuicamera.git -b 16 vendor/xiaomi/miuicamera
 
+# BCR
+echo 'Cloning BCR'
+rm -rf vendor/bcr && git clone https://github.com/Lunaris-AOSP/vendor_bcr.git -b 16.2 vendor/bcr
+
 echo 'Cloning process is completed, now its time for lunch'
