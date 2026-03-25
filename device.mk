@@ -234,7 +234,8 @@ PRODUCT_PACKAGES += \
     SystemUIOverlayRosemary \
     TetheringConfigOverlayRosemary \
     WifiOverlayRosemary \
-    SettingsOverlayRosemary
+    SettingsOverlayRosemary \
+    Launcher3DeviceOverlay
 
 PRODUCT_PACKAGES += \
     NcmTetheringOverlay
