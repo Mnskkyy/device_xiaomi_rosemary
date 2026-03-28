@@ -34,15 +34,6 @@ on init
     write /proc/sys/net/core/wmem_max 8388608
     write /proc/sys/net/core/rmem_max 8388608
 
-    # Configure scheduler up/down_rate_limit_us
-    # LITTLE cluster (cpu0-5, A55): conservative up, slow down
-    write /sys/devices/system/cpu/cpufreq/policy0/schedutil/up_rate_limit_us 500
-    write /sys/devices/system/cpu/cpufreq/policy0/schedutil/down_rate_limit_us 20000
-    # Big cluster (cpu6-7, A76): up=500us to complement FTAS fast-react cooldown (4ms)
-    # sugov_fast_react and cold-start bypass already override this for frame tasks
-    write /sys/devices/system/cpu/cpufreq/policy6/schedutil/up_rate_limit_us 500
-    write /sys/devices/system/cpu/cpufreq/policy6/schedutil/down_rate_limit_us 10000
-
     # MGLRU (LRU_GEN) — prevent over-aggressive page reclaim under frame load
     # min_ttl_ms=1000: pages survive at least 1s before eviction eligibility
     write /sys/kernel/mm/lru_gen/min_ttl_ms 1000
