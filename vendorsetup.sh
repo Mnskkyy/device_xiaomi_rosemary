@@ -18,4 +18,8 @@ rm -rf vendor/private/keys && git clone https://github.com/Mnzz-Prjkt/android_pr
 echo 'Cloning IMS'
 rm -rf vendor/mediatek/ims && git clone https://github.com/mt6899-rodin/android_vendor_mediatek_ims.git -b lineage-23.2 vendor/mediatek/ims/
 
+# Camera
+echo 'Cloning Leica Camera'
+rm -rf vendor/xiaomi/miuicamera && git clone https://github.com/Mnskkyy/proprietary_vendor_xiaomi_miuicamera.git -b 16 vendor/xiaomi/miuicamera
+
 echo 'Cloning process is completed, now its time for lunch'
