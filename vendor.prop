@@ -313,3 +313,12 @@ ro.vendor.connsys.dedicated.log.port=bt,wifi,gps,mcu
 
 # Zygote
 zygote.critical_window.minute=10
+
+# PowerHAL / InteractionHandler
+# Disable fb0/drm idle-state polling (path not present on MT6785)
+vendor.powerhal.disp.idle_support=false
+# INTERACTION boost window: min 200ms, max 800ms, offset 0ms
+# (libperfmgr InteractionHandler: finalDuration = clamp(input+offset, min, max))
+vendor.powerhal.interaction.min=50
+vendor.powerhal.interaction.max=800
+vendor.powerhal.interaction.offset=0
