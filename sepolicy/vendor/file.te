@@ -14,6 +14,9 @@ type proc_sched_stune, fs_type, proc_type;
 # GPU
 type vendor_sysfs_gpu, fs_type, sysfs_type;
 
+# MGLRU (LRU_GEN) — kernel/mm/lru_gen sysfs nodes (min_ttl_ms, enabled)
+type sysfs_lru_gen, fs_type, sysfs_type;
+
 # Touchpanel
 type sysfs_touchpanel, sysfs_type, fs_type;
 

@@ -67,3 +67,9 @@ genfscon sysfs /devices/platform/battery/power_supply/bms/wakeup 								u:objec
 genfscon sysfs /devices/platform/maxim_ds28e16/power_supply/batt_verify/wakeup 							u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/mt_charger/power_supply/main/wakeup 								u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/usb0/wakeup 											u:object_r:sysfs_wakeup:s0
+
+# MGLRU (LRU_GEN) — sysfs nodes (min_ttl_ms, enabled) written by init
+genfscon sysfs /kernel/mm/lru_gen										u:object_r:sysfs_lru_gen:s0
+
+# MGLRU <-> Scheduler bridge stats (read-only, /proc/mglru_sched_stats)
+genfscon proc /mglru_sched_stats										u:object_r:proc_security:s0
