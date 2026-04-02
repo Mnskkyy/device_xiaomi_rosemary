@@ -2,13 +2,13 @@ echo 'Starting to clone stuffs needed to build for rosemary'
 
 # Mediatek
 echo 'Cloning sepolicy_vndr'
-rm -rf device/mediatek/sepolicy_vndr && git clone https://github.com/LineageOS/android_device_mediatek_sepolicy_vndr -b lineage-23.2 $PWD/device/mediatek/sepolicy_vndr
+rm -rf device/mediatek/sepolicy_vndr && git clone https://github.com/LineageOS/android_device_mediatek_sepolicy_vndr -b lineage-22.2 $PWD/device/mediatek/sepolicy_vndr
 echo 'Cloning Hardware mediatek'
-rm -rf hardware/mediatek && git clone https://github.com/LineageOS/android_hardware_mediatek -b lineage-23.2 $PWD/hardware/mediatek
+rm -rf hardware/mediatek && git clone https://github.com/LineageOS/android_hardware_mediatek -b lineage-22.2 $PWD/hardware/mediatek
 
 # Xiaomi
 echo 'Cloning hardware xiaomi'
-rm -rf hardware/xiaomi && git clone https://github.com/LineageOS/android_hardware_xiaomi -b lineage-23.2 $PWD/hardware/xiaomi
+rm -rf hardware/xiaomi && git clone https://github.com/LineageOS/android_hardware_xiaomi -b lineage-22.2 $PWD/hardware/xiaomi
 
 # Keys
 echo 'Cloning Private Keys'
