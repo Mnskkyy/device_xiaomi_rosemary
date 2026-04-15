@@ -12,7 +12,7 @@ rm -rf hardware/xiaomi && git clone https://github.com/LineageOS/android_hardwar
 
 # Camera
 echo 'Cloning Leica Camera'
-rm -rf vendor/xiaomi/miuicamera && git clone https://github.com/Mnskkyy/proprietary_vendor_xiaomi_miuicamera.git -b 16 vendor/xiaomi/miuicamera
+rm -rf vendor/xiaomi/miuicamera && git clone https://gitea.com/Mnskkyy/proprietary_vendor_xiaomi_miuicamera.git -b 16 vendor/xiaomi/miuicamera
 
 # Keys
 echo 'Cloning Private Keys'
