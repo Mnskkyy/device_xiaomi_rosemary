@@ -58,6 +58,8 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('libutils.so', 'libutils-v32.so'),
     ('vendor/bin/mnld', 'vendor/lib64/libaalservice.so', 'vendor/lib64/libcam.utils.sensorprovider.so', 'vendor/lib64/librgbwlightsensor.so'): blob_fixup()
         .replace_needed('libsensorndkbridge.so', 'android.hardware.sensors@1.0-convert-shared.so'),
+    'vendor/etc/vintf/manifest/manifest_media_c2_V1_2_default.xml': blob_fixup()
+        .regex_replace('1.1', '1.2'),
     'vendor/lib64/hw/vendor.mediatek.hardware.pq@2.15-impl.so': blob_fixup()
         .replace_needed('libutils.so', 'libutils-v32.so'),
     'vendor/lib64/libgf_hal.so': blob_fixup()
