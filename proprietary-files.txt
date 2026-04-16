@@ -29,7 +29,6 @@ vendor/bin/rt5512_calibration
 vendor/etc/FV-SAM-MTK2.dat
 vendor/etc/smartpa_param/AW_DSP.bin
 vendor/lib/hw/audio.primary.mt6785.so
-vendor/lib/hw/audio.r_submix.mt6785.so
 vendor/lib/libMtkSpeechEnh.so
 vendor/lib/lib_iir.so
 vendor/lib/lib_speech_enh.so
