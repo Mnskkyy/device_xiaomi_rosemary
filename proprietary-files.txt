@@ -1223,8 +1223,6 @@ system_ext/lib64/vendor.mediatek.hardware.videotelephony-V1-ndk.so|8b13966bdf703
 system_ext/lib64/vendor.mediatek.hardware.videotelephony@1.0.so|01b68c7597d585ec39441628f66b02b3b091db99
 
 # IMS (System) - from plato-user 14 UP1A.230620.001 V816.0.12.0.ULQMIXM release-keys
-system_ext/framework/mediatek-common.jar:system/framework/mediatek-common.jar|3982a7d7f51217ce23754864f6571ea6da28bf07;BOOT_JAR
-system_ext/framework/mediatek-framework.jar:system/framework/mediatek-framework.jar|82f3c03fa36e9f3c26985b004674788d8115e9f1;BOOT_JAR
 system_ext/framework/mediatek-ims-base.jar:system/framework/mediatek-ims-base.jar|bcc65d4fd5e7534f2a0aa122908454df00591cfa;BOOT_JAR
 system_ext/framework/mediatek-ims-common.jar:system/framework/mediatek-ims-common.jar|c760dcced520d0185de7312636ed2fee79bee2b4;BOOT_JAR
 system_ext/framework/mediatek-ims-extension-plugin.jar:system/framework/mediatek-ims-extension-plugin.jar|b91e54270047b6d91f606136b7203255198952aa;BOOT_JAR
