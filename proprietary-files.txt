@@ -1230,6 +1230,7 @@ system_ext/framework/mediatek-telecom-common.jar:system/framework/mediatek-telec
 system_ext/framework/mediatek-telephony-base.jar:system/framework/mediatek-telephony-base.jar|79cf518b2e9e528937e969ab244c31ce17b9e7dd;BOOT_JAR
 system_ext/framework/mediatek-telephony-common.jar:system/framework/mediatek-telephony-common.jar|63e3c96ca44f5e57e5aacbcab644352b0e6d37f8;BOOT_JAR
 system_ext/priv-app/ImsService/ImsService.apk:system/priv-app/ImsService/ImsService.apk|e4bc27e84c86a03f1db24d206f7f153697f9b7f2|959ff0c93ea8ce70ff2ef28495254fe4cb08b155
+system_ext/priv-app/MtkGbaService/MtkGbaService.apk:system/priv-app/MtkGbaService/MtkGbaService.apk|adad27985f2cccb17f7c7e02b5661ac3850451f4
 
 # IR
 vendor/bin/consumerird
